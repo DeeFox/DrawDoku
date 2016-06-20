@@ -2,7 +2,11 @@
 _Stand: 20.06.2016_
 
 #### Vorwort
-In diesem Dokument werden alle Pakete, die zwischen einem Draw!-Client und dem Draw!-Server verschickt werden aufgelistet und detailliert beschrieben. Sollte es zu Unklarheiten kommen, schreibt bitte eine E-Mail an nils.sonemann@gmail.com.
+In diesem Dokument werden alle Pakete, die zwischen einem Draw!-Client und dem Draw!-Server verschickt werden aufgelistet und detailliert beschrieben. 
+
+Sollte es zu Unklarheiten mit dem Protokoll kommen, schreibt bitte eine E-Mail an nils.sonemann@gmail.com.
+
+Bei Fragen zu Android und Android Studio, wendet euch bitte vorrangig an jp.lange3@gmail.com.
 
 Der Draw!-Server ist unter der URL: websocket://foo.bar:8080/ zu erreichen. Sämtliche Pakete werden als JSON-Datenstrukturen versendet.
 
