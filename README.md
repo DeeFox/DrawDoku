@@ -1,9 +1,13 @@
 # Draw! - Protokollbeschreibung
+_Stand: 20.06.2016_
 
 #### Vorwort
 In diesem Dokument werden alle Pakete, die zwischen einem Draw!-Client und dem Draw!-Server verschickt werden aufgelistet und detailliert beschrieben. Sollte es zu Unklarheiten kommen, schreibt bitte eine E-Mail an nils.sonemann@gmail.com.
 
 Der Draw!-Server ist unter der URL: websocket://foo.bar:8080/ zu erreichen. Sämtliche Pakete werden als JSON-Datenstrukturen versendet.
+
+Eine unter Android getestete Implementierung von Websockets lässt sich hier finden:
+https://github.com/TooTallNate/Java-WebSocket
 
 #### Protokoll
 Grundsätzlich sehen alle Anfragen an und alle Antworten vom Server ähnlich aus. Die JSON-Pakete enthalten immer ein Feld _action_, welches Auskunft darüber gibt, wie das Paket zu interpretieren ist. Der Client muss sich also merken, in welchem Kontext er sich befindet und dann dementsprechend auf die Pakete reagieren.
