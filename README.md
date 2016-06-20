@@ -8,6 +8,10 @@ Der Draw!-Server ist unter der URL: websocket://foo.bar:8080/ zu erreichen. Säm
 
 Eine unter Android getestete Implementierung von Websockets lässt sich hier finden:
 https://github.com/TooTallNate/Java-WebSocket
+Die Einbindung in die build.gradle Datei kann dabei wie folgt aussehen:
+```
+compile 'org.java-websocket:Java-WebSocket:1.3.0'
+```
 
 #### Protokoll
 Grundsätzlich sehen alle Anfragen an und alle Antworten vom Server ähnlich aus. Die JSON-Pakete enthalten immer ein Feld _action_, welches Auskunft darüber gibt, wie das Paket zu interpretieren ist. Der Client muss sich also merken, in welchem Kontext er sich befindet und dann dementsprechend auf die Pakete reagieren.
