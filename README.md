@@ -1,4 +1,7 @@
 # Draw! - Protokollbeschreibung
+_Stand: 21.06.2016_
+Gegner-ID und Gegner-Score werden in der Gameslist mit übertragen.
+
 _Stand: 20.06.2016_
 
 #### Vorwort
@@ -67,8 +70,8 @@ Sobald der Client authentifiziert ist, kann eine Übersicht aller offenen Spiele
 ```json
 {"action":"gameslist", 
 "games":[
-    {"gameid":56, "opponent":"VanGogh", "gamestate":"yourturn_draw", "streak":5, "gamepoints":800, "lastactiontime":"1466351919"},
-    {"gameid":32, "opponent":"Dali", "gamestate":"opponentturn_guess", "streak":2, "gamepoints":300, "lastactiontime":"1466351422"}
+    {"gameid":56, "opponent":"VanGogh", "opponentid":223322, "opponentscore":3300, "gamestate":"yourturn_draw", "streak":5, "gamepoints":800, "lastactiontime":"1466351919"},
+    {"gameid":32, "opponent":"Dali", "opponentid":341234, "opponentscore":1000, "gamestate":"opponentturn_guess", "streak":2, "gamepoints":300, "lastactiontime":"1466351422"}
 ]}
 ```
 Der Server sendet daraufhin eine Liste aller offenen Spiele inklusive einiger Zusatzinformationen an den Client. Dieses Paket kann auch ohne vorheriges Anfragen durch den Client gesendet werden, wenn sich bei den eigenen Spielen Änderungen ergeben. So bekommt der Client eine aktualisierte Liste seiner Spiele wenn z.B. ein anderer Spieler ein Bild erraten hat und nun der Client mit Raten dran ist.
