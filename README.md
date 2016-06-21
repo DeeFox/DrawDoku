@@ -8,7 +8,8 @@ Sollte es zu Unklarheiten mit dem Protokoll kommen, schreibt bitte eine E-Mail a
 
 Bei Fragen zu Android und Android Studio wendet euch bitte vorrangig an jp.lange3@gmail.com.
 
-Der Draw!-Server ist unter der URL: websocket://foo.bar:8080/ zu erreichen. Sämtliche Pakete werden als JSON-Datenstrukturen versendet.
+Der Draw!-Server ist unter der URL: ws://draw.dfox.eu:8080/ zu erreichen. Sämtliche Pakete werden als JSON-Datenstrukturen versendet.
+**Aktuell sind nur die Funktionen _register_ und _auth_ freigeschaltet.**
 
 Eine unter Android getestete Implementierung von Websockets lässt sich hier finden:
 https://github.com/TooTallNate/Java-WebSocket
