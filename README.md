@@ -1,6 +1,6 @@
 # Draw! - Protokollbeschreibung
 _Stand: 21.06.2016_
-Gegner-ID und Gegner-Score werden in der Gameslist mit übertragen.
+Gegner-ID, Gegner-Score und eigener Score werden in der Gameslist mit übertragen.
 
 _Stand: 20.06.2016_
 
@@ -68,7 +68,7 @@ Wurden korrekte Daten übermittelt, teilt der Server dem Client mit, dass dieser
 Sobald der Client authentifiziert ist, kann eine Übersicht aller offenen Spiele angefragt werden. Dazu sendet der Client dieses einfache Paket an den Server.
   - **Server -> Client**
 ```json
-{"action":"gameslist", 
+{"action":"gameslist", "score":1250,
 "games":[
     {"gameid":56, "opponent":"VanGogh", "opponentid":223322, "opponentscore":3300, "gamestate":"yourturn_draw", "streak":5, "gamepoints":800, "lastactiontime":"1466351919"},
     {"gameid":32, "opponent":"Dali", "opponentid":341234, "opponentscore":1000, "gamestate":"opponentturn_guess", "streak":2, "gamepoints":300, "lastactiontime":"1466351422"}
