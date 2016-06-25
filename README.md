@@ -122,7 +122,7 @@ _oder_
 ```json
 {"action":"readyfordrawing"}
 ```
-Ist der aktuell durchzuführende Spielzug das Malen eines Bildes für den Mitspieler und der Spieler hat bereits einen Begriff gewählt, sendet der Server dieses Paket zum Client. Der Client sollte daraufhin die Ansicht zur Malen-UI wechseln und den Spieler auffordern das gewählte Wort zu malen. Ist der Spieler mit dem Malen fertig, so soll das Gemalte als Paket an den Server gesendet werden. Die Einzelheiten dazu sind unter dem Punkt __ zu finden.
+Ist der aktuell durchzuführende Spielzug das Malen eines Bildes für den Mitspieler und der Spieler hat bereits einen Begriff gewählt, sendet der Server dieses Paket zum Client. Der Client sollte daraufhin die Ansicht zur Malen-UI wechseln und den Spieler auffordern das gewählte Wort zu malen. Ist der Spieler mit dem Malen fertig, so soll das Gemalte als Paket an den Server gesendet werden. Die Einzelheiten dazu sind unter dem Punkt _Abschicken eines gemalten Bilds_ zu finden.
 
 _oder_
 
