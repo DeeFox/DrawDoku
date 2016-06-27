@@ -102,7 +102,7 @@ Um ein neues Spiel zu starten hat der Client zwei Möglichkeiten zur Auswahl. Zu
 _Mit Spielzug ist hierbei das Malen eines Bildes oder das Erraten eines Bildes vom Mitspieler gemeint._
   - **Client -> Server**
 ```json
-{"action":"doturn", "gameid":"99"}
+{"action":"doturn", "gameid":99}
 ```
 
 Durch Senden dieses Paketes signalisiert der Client dem Server, dass er einen Spielzug durchführen möchte. Welcher Spielzug an der Reihe ist, wird durch den Server entschieden und dementsprechend kommt ein bestimmtes Antwort-Paket zurück.
