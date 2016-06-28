@@ -1,11 +1,11 @@
 # Draw! - Protokollbeschreibung
+_Stand: 28.06.2016_
+An diversen Stellen _gameid_-Felder eingepflegt. Alle Schritte für das Erstellen von Spielen und das Übermitteln von Draw-Daten dokumentiert. **Die Server-Datenbank wird in Zukunft regelmäßig geleert werden, bitte passt eure App darauf an, dass die zwischengespeicherten _auth_-Daten auch wieder gelöscht werden können, wenn der _auth_-Vorgang fehlschlägt ;-)**
+
 _Stand: 21.06.2016_
 Gegner-ID, Gegner-Score und eigener Score werden in der Gameslist mit übertragen.
 
 _Stand: 20.06.2016_
-
-_Stand: 28.06.2016_
-An diversen Stellen _gameid_-Felder eingepflegt. Alle Schritte für das Erstellen von Spielen und das Übermitteln von Draw-Daten dokumentiert. **Die Server-Datenbank wird in Zukunft regelmäßig geleert werden, bitte passt eure App darauf an, dass die zwischengespeicherten _auth_-Daten auch wieder gelöscht werden können, wenn der _auth_-Vorgang fehlschlägt ;-)**
 
 #### Vorwort
 In diesem Dokument werden alle Pakete, die zwischen einem Draw!-Client und dem Draw!-Server verschickt werden aufgelistet und detailliert beschrieben. 
