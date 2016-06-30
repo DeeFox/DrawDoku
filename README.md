@@ -172,7 +172,7 @@ Hat der Client das Paket _readyfordrawdatarequest_ erhalten und lädt nach und n
 Als Antwort sendet der Server nun das _guessword_ - Paket, wie im Kapitel _Durchführen eines Spielzuges_ beschrieben.
 
 ---
-##### Abschicken eines erratenen Worts (NOCH NICHT FREIGESCHALTET) #####
+##### Abschicken eines erratenen Worts #####
   - **Client -> Server**
 ```json
 {"action":"guess", "gameid":55, "word":"GITARRE"}
