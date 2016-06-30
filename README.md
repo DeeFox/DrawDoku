@@ -178,7 +178,7 @@ Als Antwort sendet der Server nun das _guessword_ - Paket, wie im Kapitel _Durch
 {"action":"guess", "gameid":55, "word":"GITARRE"}
 ```
 Hat der Spieler ein Wort in die Eingabemaske eingegeben und möchte dieses zur Überprüfung abschicken, so muss dieses Paket an den Server gesendet werden.
-Der Server antwortet daraufhin mit dem folgenden Paket, welches im Feld _result_ anzeigt, ob das Wort korrekt erraten wurde. Die beiden Möglichen Werte für das Feld sind "correct" oder "wrong". Die möglichen Punkte werden zur möglichen Erfolgs-Anzeige mitgesendet.
+Der Server antwortet daraufhin mit dem folgenden Paket, welches im Feld _result_ anzeigt, ob das Wort korrekt erraten wurde. Die beiden Möglichen Werte für das Feld sind "correct" oder "wrong". Die möglichen Punkte werden zur möglichen Erfolgs-Anzeige mitgesendet. Im Erfolgsfall wird nach dem gesendeten _guessresult_-Paket eine aktualisierte Games-Liste an beide Spieler gesendet.
   - **Server -> Client**
 ```json
 {"action":"guessresult", "result":"correct", "points":"98"}
