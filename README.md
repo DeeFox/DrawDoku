@@ -1,4 +1,7 @@
 # Draw! - Protokollbeschreibung
+_Stand: 30.06.2016_
+Alle Funktionen wurden freigeschaltet. Die Server-Datenbank wurde geleert. Die Dokumentation wurde fertiggestellt.
+
 _Stand: 28.06.2016_
 An diversen Stellen _gameid_-Felder eingepflegt. Alle Schritte für das Erstellen von Spielen und das Übermitteln von Draw-Daten dokumentiert. **Die Server-Datenbank wird in Zukunft regelmäßig geleert werden, bitte passt eure App darauf an, dass die zwischengespeicherten _auth_-Daten auch wieder gelöscht werden können, wenn der _auth_-Vorgang fehlschlägt ;-)**
 
@@ -152,7 +155,7 @@ Beispiel-UI:
 Hat der Client die Liste mit zur Verfügung stehenden Wörtern erhalten und der Spieler sich für ein Wort entschieden, so kann mit dieser Nachricht das gewählte Wort gespeichert werden. Die Game-Id muss mit übergeben werden. Das ausgewählte Wort soll nicht direkt, sondern nur der Schwierigkeits-Identifier, übertragen werden. Mögliche Werte sind also _"easy"_, _"medium"_ und _"hard"_. Hat der Server diese Nachricht akzeptiert wird eine _"readyfordrawing"_-Nachricht wie im Punkt _Durchführen eines Spielzuges_ beschrieben an den Client geschickt.
 
 ---
-##### Draw-Datenblöcke abrufen (NOCH NICHT FREIGESCHALTET) #####
+##### Draw-Datenblöcke abrufen #####
   - **Client -> Server**
 ```json
 {"action":"getdrawdata", "gameid":55, "chunk":0}
@@ -160,7 +163,7 @@ Hat der Client die Liste mit zur Verfügung stehenden Wörtern erhalten und der 
 Nachdem der Client vom Server die Nachricht _"readyfordrawdatarequest"_ erhalten hat, kann der erste Daten-Block mit _chunk_-ID Null abgerufen werden. Es folgt eine Antwort des Servers im Format, welches unter _Abschicken eines gemalten Bilds_ beschrieben wird. Nun soll der Client die empfangenen Daten wiedergeben. Wurden alle empfangenen Daten gezeichnen, kann der Client einen weiteren Block mit inkrementierter _chunk_-ID abrufen und zeichnen. Der Spieler soll dabei jederzeit in der Lage sein, das Wiedergeben vorzeitig zu unterbrechen (siehe _(Vorzeitiges) Erraten des Bildes_). Die Gesamtanzahl an vorhandenen Chunks wird im Feld _chunks_ der _readyfordrawdatarequest_-Nachricht übermittelt.
 
 ---
-##### (Vorzeitiges) Erraten des Bildes (NOCH NICHT FREIGESCHALTET) #####
+##### (Vorzeitiges) Erraten des Bildes #####
   - **Client -> Server**
 ```json
 {"action":"stopdrawdata", "gameid": 55}
@@ -170,7 +173,16 @@ Als Antwort sendet der Server nun das _guessword_ - Paket, wie im Kapitel _Durch
 
 ---
 ##### Abschicken eines erratenen Worts (NOCH NICHT FREIGESCHALTET) #####
-*Dokumentation folgt...*
+  - **Client -> Server**
+```json
+{"action":"guess", "gameid":55, "word":"GITARRE"}
+```
+Hat der Spieler ein Wort in die Eingabemaske eingegeben und möchte dieses zur Überprüfung abschicken, so muss dieses Paket an den Server gesendet werden.
+Der Server antwortet daraufhin mit dem folgenden Paket, welches im Feld _result_ anzeigt, ob das Wort korrekt erraten wurde. Die beiden Möglichen Werte für das Feld sind "correct" oder "wrong". Die möglichen Punkte werden zur möglichen Erfolgs-Anzeige mitgesendet.
+  - **Server -> Client**
+```json
+{"action":"guessresult", "result":"correct", "points":"98"}
+```
 
 ---
 ##### Abschicken eines gemalten Bilds #####
