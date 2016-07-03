@@ -167,11 +167,11 @@ Nachdem der Client vom Server die Nachricht _"readyfordrawdatarequest"_ erhalten
 
   - *Server -> Client**
 ```json
-{"action":"chunkeddrawdata", "gameid":55, "chunk":0, "totalchunks":20, "bgcolor":"#FF00FF",
+{"action":"chunkeddrawdata", "gameid":55, "chunk":0, "totalchunks":20, "bgcolor":"#FF00FF", "data":[
   {"n":0, "type":"rline", "pts":[0.3, 0.5, 0.4, 0.8, 0.3, 0.3], "col":"#000000", "thick":0.2},
   {"n":1, "type":"bline", "pts":[[0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1],
-                                  [0.2, 0.4, 0.67, 0.11, 0.2, 0.2, 0.2, 0.1]
-                              ], "col":"#000000", "thick":0.2}
+                                 [0.2, 0.4, 0.67, 0.11, 0.2, 0.2, 0.2, 0.1]
+  ], "col":"#000000", "thick":0.2}]
 }
 ```
 Die Antwort vom Server listet die Zeichen-Anweisungen des aktuellen Blocks im Format, wie unter _Abschicken eines gemalten Bilds_ beschrieben, auf. Die Hintergrundfarbe wird in jedem Chunk mitübertragen.
