@@ -1,4 +1,7 @@
 # Draw! - Protokollbeschreibung
+_Stand: 02.07.2016_
+Antwort-Paket für den Drawdata-Request wurde eingepflegt.
+
 _Stand: 30.06.2016_
 Alle Funktionen wurden freigeschaltet. Die Server-Datenbank wurde geleert. Die Dokumentation wurde fertiggestellt.
 
@@ -161,6 +164,17 @@ Hat der Client die Liste mit zur Verfügung stehenden Wörtern erhalten und der 
 {"action":"getdrawdata", "gameid":55, "chunk":0}
 ```
 Nachdem der Client vom Server die Nachricht _"readyfordrawdatarequest"_ erhalten hat, kann der erste Daten-Block mit _chunk_-ID Null abgerufen werden. Es folgt eine Antwort des Servers im Format, welches unter _Abschicken eines gemalten Bilds_ beschrieben wird. Nun soll der Client die empfangenen Daten wiedergeben. Wurden alle empfangenen Daten gezeichnen, kann der Client einen weiteren Block mit inkrementierter _chunk_-ID abrufen und zeichnen. Der Spieler soll dabei jederzeit in der Lage sein, das Wiedergeben vorzeitig zu unterbrechen (siehe _(Vorzeitiges) Erraten des Bildes_). Die Gesamtanzahl an vorhandenen Chunks wird im Feld _chunks_ der _readyfordrawdatarequest_-Nachricht übermittelt.
+
+  - *Server -> Client**
+```json
+{"action":"chunkeddrawdata", "gameid":55, "chunk":0, "totalchunks":20, "bgcolor":"#FF00FF",
+  {"n":0, "type":"rline", "pts":[0.3, 0.5, 0.4, 0.8, 0.3, 0.3], "col":"#000000", "thick":0.2},
+  {"n":1, "type":"bline", "pts":[[0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1],
+                                  [0.2, 0.4, 0.67, 0.11, 0.2, 0.2, 0.2, 0.1]
+                              ], "col":"#000000", "thick":0.2}
+}
+```
+Die Antwort vom Server listet die Zeichen-Anweisungen des aktuellen Blocks im Format, wie unter _Abschicken eines gemalten Bilds_ beschrieben, auf. Die Hintergrundfarbe wird in jedem Chunk mitübertragen.
 
 ---
 ##### (Vorzeitiges) Erraten des Bildes #####
