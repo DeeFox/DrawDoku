@@ -1,5 +1,5 @@
 # Draw! - Protokollbeschreibung
-_Stand: 9.07.2016 (4:00)_
+_Stand: 09.07.2016 (4:00 Uhr)_
 Die Server-Datenbank wurde wegen einer Anbindungs-Optimierung geleert!_
 
 _Stand: 02.07.2016_
