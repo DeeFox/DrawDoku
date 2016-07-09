@@ -1,6 +1,6 @@
 # Draw! - Protokollbeschreibung
-_Stand: 09.07.2016 (4:00 Uhr)_
-Die Server-Datenbank wurde wegen einer Anbindungs-Optimierung geleert!_
+_Stand: 09.07.2016 (4:15 Uhr)_
+Die Server-Datenbank musste wegen einem Bugfix geleert werden!_
 
 _Stand: 02.07.2016_
 Antwort-Paket für den Drawdata-Request wurde eingepflegt.
