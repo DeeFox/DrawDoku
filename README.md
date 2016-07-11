@@ -1,4 +1,7 @@
 # Draw! - Protokollbeschreibung
+_Stand: 11.07.2016_
+Ein unauffindbarer Bug, bei dem Teile von Linien verschluckt wurden, konnte behoben werden :heart_eyes:
+
 _Stand: 09.07.2016 (4:15 Uhr)_
 Die Server-Datenbank musste wegen einem Bugfix geleert werden!_
 
