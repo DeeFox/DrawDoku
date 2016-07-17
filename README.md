@@ -1,4 +1,8 @@
 # Draw! - Protokollbeschreibung
+_Stand: 18.07.2016_
+_Der Draw!-Server wurde abgeschaltet!_
+
+
 _Stand: 11.07.2016_
 
 - Ein unauffindbarer Bug, bei dem Teile von Linien verschluckt wurden, konnte behoben werden :heart_eyes:
