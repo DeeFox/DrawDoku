@@ -1,6 +1,6 @@
 # Draw! - Protokollbeschreibung
-_Stand: 18.07.2016_
-_Der Draw!-Server wurde abgeschaltet!_
+_Stand: 18.07.2016_ 
+**Der Draw!-Server wurde abgeschaltet!**
 
 
 _Stand: 11.07.2016_
