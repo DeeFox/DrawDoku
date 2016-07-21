@@ -1,4 +1,7 @@
 # Draw! - Protokollbeschreibung
+**Der Server-Quellcode ist für alle Interessierten ab sofort im [Draw-Server Repository](https://github.com/DeeFox/Draw-Server) zu finden.**
+
+
 _Stand: 18.07.2016_ 
 **Der Draw!-Server wurde abgeschaltet!**
 
